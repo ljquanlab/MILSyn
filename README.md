@@ -6,8 +6,7 @@ Accurate prediction of drug combination synergy remains challenging due to the v
 
 ### Model overview
 
-<img width="554" height="745" alt="image" src="https://github.com/user-attachments/assets/a6311edd-4594-42cf-8f94-fb3a5c911de6" />
-
+<img width="4450" height="5845" alt="figure1 drawio" src="https://github.com/user-attachments/assets/b923cf3c-8e67-4e24-9172-36aae7c0c367" />
 
 ### Project structure
 
@@ -38,3 +37,4 @@ Accurate prediction of drug combination synergy remains challenging due to the v
 python main.py --mode train --batch_szie 256 --nfold 21 > './experiment/'$(date +'%Y%m%d_%H%M').log
 
 ```
+
