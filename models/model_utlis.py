@@ -264,6 +264,22 @@ class MixGraphExtractor(nn.Module):
             if isinstance(m, nn.Linear):
                 nn.init.kaiming_normal_(m.weight, nonlinearity='relu')
 
+class AttentionFusion(nn.Module):
+    def __init__(self, embed_size=128, num_heads=8, hidden_dim=256, layers=1):
+        super().__init__()
+        self.diff_att = SelfAttention(embed_size, num_heads, 0.1)
+        self.self_output = SelfOutput(embed_size, 0.1)
+        self.intermediate = Intermediate(embed_size, hidden_dim)
+        self.output = Output(hidden_dim, embed_size, 0.1)
+        self.layers = layers
+
+    def forward(self, x, mask):
+        x_att, _ = self.diff_att(x, mask)
+        out = self.self_output(x_att, x)
+        intermediate_output = self.intermediate(out)
+        layer_output = self.output(intermediate_output, out)
+        return layer_output
+        
 class FeatureFusion(nn.Module):
     def __init__(self,feat_dim=1024, llm_dim = 1536):
         super(FeatureFusion, self).__init__()
