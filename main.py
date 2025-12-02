@@ -8,7 +8,7 @@ import numpy as np
 
 from models.model import MILSynNet
 from utlis import (EarlyStopping, load_dataloader, load_infer_dataloader,
-                   set_random_seed, train, validate, infer, collect_env)
+                   set_random_seed, train, validate, collect_env)
 
 
 
@@ -83,7 +83,7 @@ def main():
 
         for k in nfold:
             model = (
-                MILSynNet(model_config).to(device))
+                MILSynNet(args).to(device))
             # print(model)
             total = sum([param.nelement() for param in model.parameters()])
             print("Number of parameter: %.2fM" % (total/1e6))
