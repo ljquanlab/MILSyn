@@ -1,5 +1,7 @@
 # Multiscale Drug-Cell Interaction Modeling via Hybrid Graph Architectures and Knowledge-Aware Fusion for Drug Synergy Prediction
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20676374.svg)](https://doi.org/10.5281/zenodo.20676374)
+
 ## Abstract
 
 Accurate prediction of drug combination synergy remains challenging due to the vast combinatorial space and strong cellular context-dependency of drug responses. To address these limitations, we present MILSyn, a multimodal interaction learning framework designed to capture multi-scale drug-cell interactions through three integrated components: (1) relational modeling of heterogeneous graph structures using a hybrid RGCN-GATv2 architecture, (2) cross-modal fusion of biochemical features spanning SMILES, substructures, 3D conformations, and multi-omics profiles, and (3) knowledge-aware reasoning via LLM-derived semantic embeddings. Evaluated on DrugComb and four external benchmarks, MILSyn consistently outperforms state-of-the-art models, demonstrating robust generalization in cold-start scenarios and significant performance gains under few-shot fine-tuning for rare tumors. Attention-based analyses further reveal biologically meaningful molecular and pathway determinants of synergy. By combining scalability with interpretability, MILSyn offers a mechanism-aware framework to accelerate rational drug combination design in precision oncology.
