@@ -6,7 +6,7 @@ Accurate prediction of drug combination synergy remains challenging due to the v
 
 ### Model overview
 
-<img src="[C:\Users\Maoyexuan\Desktop\assets\Bio_FIgure1.drawio.png](https://github.com/ljquanlab/MILSyn/blob/master/FIgure1.png)" alt="Bio_FIgure1.drawio" style="zoom: 50%;" />
+<img src="https://github.com/ljquanlab/MILSyn/blob/master/FIgure1.png" alt="Bio_FIgure1.drawio" style="zoom: 50%;" />
 
 ### Project structure
 
